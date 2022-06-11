@@ -38,8 +38,5 @@ $desktop: 1200px;
  @media screen and (max-width: #{$desktop-0.02}) {
  @content;
 }
+}   
 }
-    
-}
-
-
