@@ -29,6 +29,7 @@ img {
 }
 
 body {
+  max-width: 1600px;
   font-family: Roboto, serif;
   background-color: var(--primary-white-color);
   color: var(--primary-text-calor);
@@ -40,16 +41,40 @@ body {
 .section {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .title {
@@ -369,51 +394,6 @@ button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  text-align: center;
-  background-position: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-fon.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-fon.jpg);
-  background-repeat: no-repeat;
-}
-
-.hero-title {
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  color: var(--primary-white-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.button-primary {
-  display: inline-block;
-  padding: 10px 32px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  min-width: 200px;
-  font-weight: 700;
-  font-style: 400;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-}
-
-.button-primary:hover, .button-primary:focus {
-  background-color: #188ce8;
-}
-
 .backdrop {
   position: fixed;
   width: 100%;
@@ -493,6 +473,51 @@ button {
 .rotate-scale-up {
   -webkit-animation: rotate-scale-up 0.65s linear both;
   animation: rotate-scale-up 0.65s linear both;
+}
+
+.hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  background-position: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-fon.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-fon.jpg);
+  background-repeat: no-repeat;
+}
+
+.hero-title {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  color: var(--primary-white-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.button-primary {
+  display: inline-block;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  min-width: 200px;
+  font-weight: 700;
+  font-style: 400;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.button-primary:hover, .button-primary:focus {
+  background-color: #188ce8;
 }
 
 .modal-title {
@@ -670,92 +695,6 @@ button {
   outline: transparent;
 }
 
-.section.specifics {
-  padding-top: 94px;
-}
-
-.section-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 120px;
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  width: 270px;
-}
-
-.section-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 0px;
-  padding-right: 0px;
-  list-style: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.section-list__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.section-list-title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  color: var(--title-text-calor);
-  text-transform: uppercase;
-}
-
-.item-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  list-style: none;
-  padding-left: 0px;
-}
-
-.item-gallery__image:not(:last-child) {
-  margin-right: 30px;
-}
-
-.item-gallery__image {
-  position: relative;
-}
-
-.item-gallery__caption {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 70px;
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: rgba(47, 48, 58, 0.8);
-}
-
 .section-team {
   max-width: 1600px;
   margin-left: auto;
@@ -864,6 +803,47 @@ button {
   fill: var(--icon);
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.item-gallery__image:not(:last-child) {
+  margin-right: 30px;
+}
+
+.item-gallery__image {
+  position: relative;
+}
+
+.item-gallery__caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 70px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .section-partners {

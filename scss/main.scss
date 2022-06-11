@@ -5,16 +5,16 @@
 @import './utils/hidden';
 @import './utils/butoon-filters';
 @import './utils/card-set';
-
+@import './utils/mixins';
 
 
 
 @import './components/header';
-@import './components/hero';
 @import './components/modal';
+@import './components/hero';
 @import './components/modal-form';
 @import './components/section-specifics';
-@import './components/item-gallery';
 @import './components/team';
+@import './components/item-gallery';
 @import './components/partners';
 @import './components/footer';
