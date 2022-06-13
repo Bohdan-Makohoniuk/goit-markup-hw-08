@@ -5,7 +5,7 @@ $desktop: 1200px;
 
 @if $type =='mobile-only' {
 
-@media screen and (max-width: #{$tablet-0.02}) {
+@media screen and (max-width: #{$tablet - 1}) {
 @content;
 }
 }
@@ -23,7 +23,7 @@ $desktop: 1200px;
 }
 
 @if $type =='tablet-only' {
-    @media screen and (min-width: #{$tablet-0.02}) and (max-width: #{$tablet-0.02}) {
+    @media screen and (min-width: #{$tablet}) and (max-width: #{$desktop - 0.02}) {
         @content;
     }
 }
@@ -35,7 +35,7 @@ $desktop: 1200px;
 }
 
 @if $type =='not-desktop' {                
- @media screen and (max-width: #{$desktop-0.02}) {
+ @media screen and (max-width: #{$desktop - 1}) {
  @content;
 }
 }   

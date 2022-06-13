@@ -1,37 +1,47 @@
 .section-list {
-    padding-left: 0px;
-    padding-right: 0px;
-
-    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 0px;
     margin-bottom: 0px;
+    
+@include mq(tablet){
+display: flex;
 
+
+    .section-list__item:nth-child(2n-1) {
+        margin-right: 30px;
+        
+        
     }
-
-   
-    @media screen and (min-width: 480px){
-        
-        
+    &__item:nth-child(-n+2){
+    margin-bottom: 30px;
+    }
 }
-    @media screen and (min-width: 768px){
-        
-        
-    //     flex-wrap: wrap;
-    //     &__item:not(:last-child) {
-    //         margin-right: 30px;
-    // }
-}
-                
-    
 
-.section-list__item{
-@media screen and (min-width: 768px){
+@include mq(desktop){
     display: flex;
-    margin: 0px;
-}
+        flex-wrap: nowrap;
+        width: 270px;
     
-    
+        .section-list__item:not(:last-child) {
+            margin-right: 30px;
 
+            
+        }
+      
+}
+
+ &__item {
+    @include mq(mobile-only){
+        max-width: 450px;
+    }
+    @include mq(tablet-only){
+        
+        max-width: 354px;
+        
+    }
+ }
 }
 
 
@@ -44,38 +54,28 @@
     border-radius: 4px;
     margin-bottom: 30px;
     @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        width: 270px;
-        
+        width: 354px;
         }
-    
-    
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+        }
+
 }   
 
 
 
 .section-list-title {
     margin-bottom: 10px;
-
+    text-align: left;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     color: var(--title-text-calor);
 
     text-transform: uppercase;
-    @media screen and (min-width: 480px) {
-            text-align: center;
-            justify-content: center;
-            flex-direction: column;
+    @include mq(mobile-only){
+        text-align: center;
+    }
     
-        }
-    
-        @media screen and (min-width: 768px) {
-            text-align: center;
-            justify-content: center;
-            flex-direction: column;
-    
-        }
 }
 

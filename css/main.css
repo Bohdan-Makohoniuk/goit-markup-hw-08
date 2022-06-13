@@ -714,19 +714,53 @@ button {
 }
 
 .section-list {
-  padding-left: 0px;
-  padding-right: 0px;
-  list-style: none;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 @media screen and (min-width: 768px) {
-  .section-list__item {
+  .section-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0px;
+  }
+  .section-list .section-list__item:nth-child(2n-1) {
+    margin-right: 30px;
+  }
+  .section-list__item:nth-child(-n+2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 270px;
+  }
+  .section-list .section-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-list__item {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .section-list__item {
+    max-width: 354px;
   }
 }
 
@@ -748,17 +782,19 @@ button {
 
 @media screen and (min-width: 768px) {
   .section-icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-icon {
     width: 270px;
   }
 }
 
 .section-list-title {
   margin-bottom: 10px;
+  text-align: left;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -766,29 +802,9 @@ button {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .section-list-title {
     text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .section-list-title {
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
