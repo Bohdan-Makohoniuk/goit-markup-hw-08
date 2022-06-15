@@ -8,16 +8,23 @@
     @include mq(mobile-only){
         display: block;
     }
-    
+        
+        
+            
+        
 
     & .title-portfolio {
+            width: 306px;
             font-weight: 700;
             font-size: 18px;
             line-height: 2;
             letter-spacing: 0.06em;
-    
+         
             color: var(--title-text-calor);
+            text-decoration: none;
             cursor: pointer;
+            margin-bottom: 4px;
+            
         }
     
 }
@@ -30,6 +37,12 @@
 }
 
 .img-link {
+    @include mq(tablet-only) {
+            max-width: 354px;
+        }
+    @include mq(desktop) {
+            max-width: 370px;
+        }
     display: block;
     text-decoration: none;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,7 +50,7 @@
     &:hover,
     &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-                1px 4px 6px rgba(0, 0, 0, 0.16);
+            1px 4px 6px rgba(0, 0, 0, 0.16);
             cursor: pointer;
         }
 
@@ -47,35 +60,43 @@
                 }
 }
 
-.item-card:not(:last-child) {
-    margin-bottom: 30px;
 
+
+.item-card{
     @include mq(mobile-only) {
-            max-width: 450px;
-            margin-left: auto;
-            margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+        @include mq(tablet-only) {
+            &:nth-child(2n+1) {
+                margin-right: 30px;
+            }
+    
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }   
+        @include mq(desktop) {
+    
+            margin-right: 30px;
+            margin-bottom: 30px;
+    
+            &:nth-child(3n) {
+                margin-right: 0px;
+    
+                &:nth-last-child(-n + 3) {
+                    margin-bottom: 0px;
+                }
+            }
+    
         }
-    @include mq(tablet) {
-            max-width: 354px;
-            
-        }
-    
-    // margin-right: 30px;
-    // margin-bottom: 30px;
-    
-    // &:nth-child(3n) {
-    //         margin-right: 0px;
-    
-    //         &:nth-last-child(-n + 3) {
-    //             margin-bottom: 0px;
-    //         }
-    //     }
 }
 
-.title-portfolio {
-    margin-bottom: 4px;
-    text-decoration: none;
-}
+
+
+
+
 
 .text-portfolio {
     color: var(--primary-text-calor);
@@ -111,7 +132,3 @@
     transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-// .card-text{
-//     max-width: 450px;
-// }
