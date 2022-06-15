@@ -958,23 +958,33 @@ button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 1199px) {
+  .title.gallery {
+    display: none;
+  }
+}
+
 .item-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  list-style: none;
-  padding-left: 0px;
+  display: none;
 }
 
-.item-gallery__image:not(:last-child) {
-  margin-right: 30px;
-}
-
-.item-gallery__image {
-  position: relative;
+@media screen and (min-width: 1200px) {
+  .item-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    list-style: none;
+    padding-left: 0px;
+  }
+  .item-gallery__image:not(:last-child) {
+    margin-right: 30px;
+  }
+  .item-gallery__image {
+    position: relative;
+  }
 }
 
 .item-gallery__caption {
