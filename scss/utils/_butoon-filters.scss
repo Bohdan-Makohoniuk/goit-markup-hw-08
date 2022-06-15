@@ -1,6 +1,10 @@
 .list.btn {
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    @include mq(mobile-only){
+        flex-wrap: wrap;
+        justify-content: start;
+    }
     padding: 0px;
     margin-top: 0px;
     margin-left: auto;
@@ -9,7 +13,10 @@
 
     & .btn:not(:last-child) {
         margin-right: 8px;
+        @include mq(mobile-only) {
+           margin-bottom: 15px; 
         }
+    }
 }
 
 .button {
