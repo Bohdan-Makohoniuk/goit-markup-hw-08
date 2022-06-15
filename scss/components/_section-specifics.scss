@@ -7,12 +7,8 @@
     
 @include mq(tablet){
 display: flex;
-
-
     .section-list__item:nth-child(2n-1) {
-        margin-right: 30px;
-        
-        
+    margin-right: 30px;  
     }
     &__item:nth-child(-n+2){
     margin-bottom: 30px;
@@ -21,8 +17,8 @@ display: flex;
 
 @include mq(desktop){
     display: flex;
-        flex-wrap: nowrap;
-        width: 270px;
+    flex-wrap: nowrap;
+    width: 270px;
     
         .section-list__item:not(:last-child) {
             margin-right: 30px;
