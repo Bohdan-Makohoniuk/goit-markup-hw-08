@@ -6,6 +6,7 @@
 }
 
 .heder-container {
+    display: flex;
     
     
     @include mq(mobile-only) {
@@ -18,10 +19,6 @@
 
 
 .main-nav {
-    @include mq(tablet-only){
-    display: flex;
-    align-items: center;
-    }
     display: flex;
     align-items: center;
 
@@ -48,15 +45,20 @@
         display: none;
         
     }
-    @include mq(tablet-only){
-        
-        
-    }
+    
     display: flex;
     padding-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
     list-style: none;
+}
+.auth-nav{
+    @include mq(tablet-only) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
 }
 
 .site-nav {
@@ -108,39 +110,37 @@
 
 
 .auth-nav {
-    // display: flex;
-    // flex-wrap: wrap;
+    
     @include mq(mobile-only){
         display: none;
     }
 
     @include mq(tablet-only){
-        display: inline-block;
-        
-
-        // flex-direction: column;
+        display:block;
         margin-left: auto;
-        // .auth-nav:not(:last-child){
-        //     margin-bottom: 10px;
-        // }
+        padding-top: 21px;
+ 
+    }
+    @include mq(desktop){
+        align-items: center;
     }
     margin-left: auto;
-    // &__item:not(:last-child) {
-    
-    //         margin-right: 50px;
-    //     }
 
     &__link {
     display: flex;
     align-items: center;
     text-decoration: none;
+    @include mq(tablet-only) {
+        padding-bottom: 10px;
+        }
+    @include mq(desktop) {
+        &__link:not(:last-child){
+            margin-right: 30px;
+        }
+    
         
     margin-top: 0px;
     margin-bottom: 0px;
-    @include mq(tablet-only){
-    
-        padding-bottom: 10px;
-    }
     // padding-top: 32px;
     // padding-bottom: 32px;
         
