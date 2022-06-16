@@ -1259,7 +1259,6 @@ address {
 
 .list-footer,
 .link {
-  display: block;
   margin: 0px;
   padding: 0px;
   color: #ffffff99;
@@ -1299,6 +1298,12 @@ address {
   .conect {
     margin-left: auto;
     margin-right: 89px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conect {
+    margin-left: 70px;
   }
 }
 
@@ -1378,6 +1383,12 @@ address {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    margin-left: 93px;
+  }
+}
+
 .footer-form__text {
   display: block;
   font-weight: 700;
@@ -1392,21 +1403,30 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (max-width: 767px) {
   .user-mail {
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .user-mail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1428,7 +1448,7 @@ address {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .email {
     margin-bottom: 20px;
   }

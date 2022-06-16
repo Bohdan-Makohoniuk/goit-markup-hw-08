@@ -76,7 +76,7 @@ address {
 
 .list-footer,
 .link {
-    display: block;
+    // display: block;
     margin: 0px;
     padding: 0px;
     color: #ffffff99;
@@ -109,6 +109,9 @@ address {
     @include mq(tablet-only) {
             margin-left: auto;
             margin-right: 89px;
+        }
+    @include mq(desktop) {
+            margin-left: 70px;
         }
         
 }
@@ -147,6 +150,7 @@ address {
             flex-direction: column;
             align-items: center;
         }
+        
     @include mq(tablet-only) {
             display: flex;
             flex-direction: column;
@@ -154,6 +158,9 @@ address {
             margin-left: auto;
             margin-right: auto;
             max-width: 450px;
+        }
+    @include mq(desktop) {
+            margin-left: 93px;
         }
         
     justify-content: center;
@@ -173,14 +180,17 @@ address {
 
 .user-mail {
     display: flex;
-    justify-content: center;
-    align-items: center;
     @include mq(mobile-only) {
-            display:block;
-            align-items: center;
-            width: 450px;
-            
-        }
+        flex-direction: column;
+        align-items: center;
+        width: 450px; 
+    }
+
+    @include mq(tablet-only) { 
+        flex-direction: column;
+        align-items: center;
+             
+    }
 }
 
 .email {
@@ -189,15 +199,9 @@ address {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 16px;
-    @include mq(mobile-only) {
-            margin-bottom: 20px;
-        }
-    @include mq(tabley-only) {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
+    @include mq(mobile) {
+        margin-bottom: 20px;
+    }
 
     color: var(--primary-white-color);
     background-color: var(--color-bg-hero);
@@ -237,16 +241,17 @@ address {
     border: none;
     border-radius: 4px;
     &-btn {
-            width: 24px;
-            height: 24px;
-        }
-                &:hover,
-                &:focus {
-                    background-color: rgba(24, 140, 232, 100%);
-                }
+        width: 24px;
+        height: 24px;
+    }
+        &:hover,
+        &:focus {
+            background-color: rgba(24, 140, 232, 100%);
+    }
 }
 
 .footer-form-icon {
+    
     fill: var(--icon-last);
     margin-left: 10px;
 }
