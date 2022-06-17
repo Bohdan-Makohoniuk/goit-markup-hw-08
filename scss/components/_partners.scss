@@ -6,40 +6,46 @@
 }
 .list.company {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0px;
+    padding: 0px;
     
     @include mq (mobile-only){
-        flex-wrap: wrap;
-        padding: 0px;
-        .partners.partners:nth-child(2n+1) {
+        
+        
+        .partners:nth-child(2n+1) {
             margin-right: 30px;
             }
 
-    @include mq (tablet-only){
-        flex-wrap: wrap;
-        padding: 0px;
-        .partners.partners{
-                margin-right: 30px;
-            }
-        .partners.partners:nth-child(3n+3) {
-            margin-right: 0px;
-            }
-    }
+    
 }
     @include mq(desktop){
         flex-wrap: nowrap;
-        .partners.partners:not(:last-child) {
+        .partners:not(:last-child) {
             margin-right: 30px;
         }
     }
         
 }
-.partners.partners {
+
+
+
+.partners {
     margin-bottom: 30px;
+@include mq (tablet-only) {
+margin-right: 30px;
+    &:nth-child(3n+3) {
+            margin-right: 0px;
+        }
+}
 
 }
+
+
+
+
 .company-link {
     display: flex;
     justify-content: center;
