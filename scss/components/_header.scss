@@ -141,8 +141,7 @@
         
     margin-top: 0px;
     margin-bottom: 0px;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
+   
         
     align-items: center;
     font-weight: 500;
@@ -187,4 +186,5 @@
     @include mq(tablet) {
         display: none;
     }
+}
 }
