@@ -585,6 +585,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .auth-nav__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 .auth-nav__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,45 +599,38 @@ button {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  align-items: center;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-calor);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .auth-nav__link {
+    color: var(--primary-text-calor);
     padding-bottom: 10px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .auth-nav__link {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-calor);
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .auth-nav__link__link:not(:last-child) {
-    margin-right: 30px;
-  }
-  .auth-nav__link:hover, .auth-nav__link:focus {
-    color: var(--accent-color);
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .auth-nav__link:hover .auth-nav__icon,
-  .auth-nav__link:focus .auth-nav__icon {
-    fill: var(--accent-color);
-    -webkit-transition: color 250ms;
-    transition: color 250ms;
-  }
+.auth-nav__link:hover, .auth-nav__link:focus {
+  color: var(--accent-color);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.auth-nav .auth-nav__icon {
+.auth-nav__link:hover .auth-nav__icon,
+.auth-nav__link:focus .auth-nav__icon {
+  fill: var(--accent-color);
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+}
+
+.auth-nav__icon {
   fill: var(--icon);
   margin-right: 10px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -639,7 +638,7 @@ button {
 }
 
 @media screen and (max-width: 767px) {
-  .auth-nav .menu__open {
+  .menu__open {
     position: fixed;
     top: 10px;
     right: 15px;
@@ -650,7 +649,7 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .auth-nav .menu__open {
+  .menu__open {
     display: none;
   }
 }
