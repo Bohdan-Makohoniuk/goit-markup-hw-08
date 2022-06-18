@@ -34,10 +34,16 @@
 
 .partners {
     margin-bottom: 30px;
+@include mq (mobile-only) {
+// margin-right: 30px;
+    &:nth-child(n+5) {
+            margin-bottom: 0px;
+        }
+}
 @include mq (tablet-only) {
 margin-right: 30px;
-    &:nth-child(3n+3) {
-            margin-right: 0px;
+    &:nth-child(n+4) {
+            margin-bottom: 0px;
         }
 }
 

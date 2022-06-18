@@ -9,7 +9,7 @@
 }
 
 body {
-    max-width: 1600px;
+    
     font-family: Roboto, serif;
     background-color: var(--primary-white-color);
     color: var(--primary-text-calor);
@@ -23,11 +23,6 @@ body {
             margin-left: auto;
             margin-right: auto;
             padding-top: 60px;
-            // padding-bottom: 60px;
-
-            @include mq(desktop) {
-                    padding-top: 94px;
-                    padding-bottom: 94px;
-                }
+            
         }
                 
