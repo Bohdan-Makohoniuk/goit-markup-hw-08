@@ -73,6 +73,10 @@
              @include mq(not-desktop) {
                 font-size: 26px;
             }
+             @include mq(desktop) {
+                font-size: 44px;
+                width: 696px;
+            }
         }
 }
 
