@@ -13,19 +13,6 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    
-    
-    
-            // @include mq (not-desktop) {
-            //     height: 400px;
-            // }
-    
-            // @include mq (desktop) {
-            //     max-width: 1600px;
-            //     height: 600px;
-            // }
-    
-    
             background-image: linear-gradient(rgba(47, 48, 58, 0.4)),
             url('../images/hero/Header-mob-img_result.jpg');
 
@@ -33,23 +20,19 @@
                             background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../images/hero/Header-mob-img@2x_result.jpg');
                         }
     
-            // @include mq (mobile) {
-            //     background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../../images/hero/Header-mob-img_result.jpg');
-    
-                
-            // }
+            
     
             @include mq (tablet) {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../../images/hero/Header-tab-img_result.jpg');
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../images/hero/Header-tab-img_result.jpg');
     
                 @include mq (retina) {
-                    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../../images/hero/Header-tab-img@2x_result.jpg');
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../images/hero/Header-tab-img@2x_result.jpg');
                 }}
             @include mq (desktop) {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../../images/hero/Header-desk-img_result.jpg');
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../images/hero/Header-desk-img_result.jpg');
     
                 @include mq (retina) {
-                    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../../images/hero/Header-desk-img@2x_result.jpg');
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url('../images/hero/Header-desk-img@2x_result.jpg');
                 }}
     
     
